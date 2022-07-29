@@ -1,8 +1,8 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import { cartReducer } from './cartSlice';
 
 export const store = configureStore({
-  reducer: {
-  },
+  reducer: cartReducer,
 });
 
 export type AppDispatch = typeof store.dispatch;
