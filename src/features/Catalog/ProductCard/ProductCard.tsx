@@ -3,7 +3,7 @@ import { Product } from "../../../types/index.types";
 import "./ProductCard.scss";
 
 import ImageNotFound from "../../../assets/image-not-found.png";
-import { useAppDispatch, useAppSelector } from "../../../store/hooks";
+import { useAppDispatch } from "../../../store/hooks";
 import { cartActions } from "../../../store/cartSlice";
 
 type ProductCardProps = {
