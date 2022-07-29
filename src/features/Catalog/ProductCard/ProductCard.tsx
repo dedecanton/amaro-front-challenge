@@ -3,6 +3,8 @@ import { Product } from "../../../types/index.types";
 import "./ProductCard.scss";
 
 import ImageNotFound from "../../../assets/image-not-found.png";
+import { useAppDispatch, useAppSelector } from "../../../store/hooks";
+import { cartActions } from "../../../store/cartSlice";
 
 type ProductCardProps = {
   product: Product;
@@ -17,17 +19,34 @@ const ProductCard = ({ product }: ProductCardProps) => {
     sizes,
     actual_price,
     regular_price,
-    code_color
+    code_color,
   } = product;
+
   const availableSizes = sizes.filter((size) => size.available);
-  const [size, setSize] = useState<string>()
-
-  const handleChangeSize = (e:ChangeEvent<HTMLInputElement>) => {
-    const size = e.target.value
-    setSize(size)
-  }
-
+  const [size, setSize] = useState<string>();
+  const [error, setError] = useState<string | null>(null);
   const productImage = image.length > 0 ? image : ImageNotFound;
+  const dispatch = useAppDispatch();
+
+  // handlers
+  const handleChangeSize = (e: ChangeEvent<HTMLInputElement>) => {
+    const size = e.target.value;
+    setSize(size);
+  };
+  const handleAddToCart = () => {
+    if (!size) {
+      setError("Selecione um tamanho!");
+      return;
+    }
+
+    setError(null);
+    dispatch(
+      cartActions.addItemToCart({
+        product,
+        size: size!,
+      })
+    );
+  };
 
   return (
     <div className="product-card__container">
@@ -61,7 +80,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
           {discount_percentage && <span>{regular_price}</span>}
         </div>
 
-        {on_sale && <button>+ Adiconar ao carrinho</button>}
+        {on_sale && (
+          <button onClick={handleAddToCart}>+ Adiconar ao carrinho</button>
+        )}
+        {error && <p className="error-message">{error}</p>}
       </div>
     </div>
   );
