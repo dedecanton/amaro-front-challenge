@@ -3,7 +3,7 @@ export type CartItem = {
   name: string;
   id: string;
   price: number;
-  quanity: number;
+  quantity: number;
   size: string;
   totalPrice: number;
 };
