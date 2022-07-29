@@ -1,7 +1,6 @@
 .cart-icon__container {
     position: relative;
     height: auto;
-
   svg {
     width: 30px;
     height: 30px;
@@ -9,8 +8,10 @@
 
   span {
     position: absolute;
-    top: 11px;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    text-align: center;
     color: black;
-    left: 11px;
   }
 }

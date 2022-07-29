@@ -24,8 +24,8 @@ const Header = () => {
   }
 
   return (
-    <header>
-      <div className={"header__container " + (isScrolled ? 'header__container-scrolled' : '')}>
+    <header className={isScrolled ? 'header__container-scrolled' : ''}>
+      <div className={"header__container"}>
         <div className="header__image" onClick={handleLogoClick}>
           <AmaroLogo />
         </div>
