@@ -1,6 +1,8 @@
 .cart-icon__container {
     position: relative;
     height: auto;
+    transition: all ease .3s;
+    cursor: pointer;
   svg {
     width: 30px;
     height: 30px;
@@ -13,5 +15,9 @@
     right: 0;
     text-align: center;
     color: black;
+  }
+
+  &:hover{
+    transform: scale(1.1);
   }
 }
