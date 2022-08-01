@@ -17,10 +17,18 @@ header {
 
     .header__image {
       width: 100px;
+      cursor: pointer;
+      transition: all ease .3s;
       svg {
         width: 100%;
         height: auto;
       }
+
+      &:hover{
+        transform: scale(1.1);
+      }
+
+
     }
   }
 }
