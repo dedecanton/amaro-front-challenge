@@ -8,8 +8,6 @@ O projeto consiste em uma site de catálogo para alguns produtos da AMARO que fo
 
 ### Página Inicial:
 
-****
-
 Inicialmente todos os produtos são mostrados, contendo:
 
 - Imagem
@@ -23,6 +21,9 @@ Inicialmente todos os produtos são mostrados, contendo:
 
 Além de mostrar os itens, há opção (checkbox) de mostrar apenas os produtos à venda, como também de procurar algum item pelo nome na barra de pesquisa.
 
+![pagina inicial](https://user-images.githubusercontent.com/67431433/184987127-e718a03f-6170-4b6d-9672-a92075bcfd79.png)
+
+
 ### Página do carrinho:
 
 - É possível visualizar todos os items adicionados no carrinho, sendo mostrado nome, imagem, preço e quantidade
@@ -30,10 +31,13 @@ Além de mostrar os itens, há opção (checkbox) de mostrar apenas os produtos 
 - É possível excluir o item
 - Exibição do valor total
 - **Os items do carrinho são persistidos mesmo com reloads.**
+![cart](https://user-images.githubusercontent.com/67431433/184987236-761adb25-3ddb-43c9-80c3-0f588c2ff109.png)
 
 ## Demonstração da aplicação
 
 - Deploy na vercel: [https://amaro-front-challenge.vercel.app/](https://amaro-front-challenge.vercel.app/)
+
+https://user-images.githubusercontent.com/67431433/184988338-873dc850-31a7-4163-8eee-0eedc61eac30.mp4
 
 ## Tecnologias/bibliotecas utilizadas
 
