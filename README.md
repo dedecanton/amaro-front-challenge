@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# Amaro front-end challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+## Explicação do projeto
 
-## Available Scripts
+Essa aplicação foi feita com o objetivo de praticar os conhecimentos de ReactJS e seu ecossistema, o desafio foi selecionado do repositório [frontend-challenges](https://github.com/felipefialho/frontend-challenges) do [Felipe Fialho](https://github.com/felipefialho).
 
-In the project directory, you can run:
+O projeto consiste em uma site de catálogo para alguns produtos da AMARO que foram disponibilizados em um json.
 
-### `npm start`
+### Página Inicial:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+****
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Inicialmente todos os produtos são mostrados, contendo:
 
-### `npm test`
+- Imagem
+- Nome
+- Preço
+- Se está em promoção (porcentagem, antigo valor e valor atual)
+- Tamanhos disponíveis
+- Selo para mostrar se está à venda.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+É possível adicionar produto por tamanho no carrinho (somente produtos à venda, e tamanhos disponíveis) .
 
-### `npm run build`
+Além de mostrar os itens, há opção (checkbox) de mostrar apenas os produtos à venda, como também de procurar algum item pelo nome na barra de pesquisa.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Página do carrinho:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- É possível visualizar todos os items adicionados no carrinho, sendo mostrado nome, imagem, preço e quantidade
+- Pode incrementar e/ou diminuir a quantidade do item
+- É possível excluir o item
+- Exibição do valor total
+- **Os items do carrinho são persistidos mesmo com reloads.**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Demonstração da aplicação
 
-### `npm run eject`
+- Deploy na vercel: [https://amaro-front-challenge.vercel.app/](https://amaro-front-challenge.vercel.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Tecnologias/bibliotecas utilizadas
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- ReactJS
+- Typescript
+- Sass (SCSS)
+- React Router
+- Redux
+- Redux Toolkit
+- Redux Persist
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Como rodar o projeto
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clonar repositório (git clone [https://github.com/dedecanton/amaro-front-challenge](https://github.com/dedecanton/amaro-front-challenge))
+2. Entrar na pasta do projeto
+3. Instalar as dependências ( rodar *yarn* *no terminal do projeto* )
+4. Para rodar em ambiente de desenvolvimento, rode o script yarn *start*
+5. Para fazer build da aplicação, rode o script yarn *build*
